@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <style>
+
+        *:focus{
+            outline: none;
+
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .cover {
+            background-image: url(https://p2.piqsels.com/preview/745/724/30/bridge-nature-road-journey.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            width: 100%;
+
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            margin-right: 10%;
+            margin-left: 10%;
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .nav input:hover {
+            background-color: lightslategrey;
+        }
+
+        .cv {
+            margin-top: 0%;
+        }
+
+        .menu input {
+            color: white;
+            border: transparent;
+            background: transparent;
+            font-size: 20px;
+        }
+
+        .headdetails {
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .mypic {
+            border-radius: 100px;
+            image-rendering: auto;
+        }
+
+        .myname {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .profile {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 10px 25px 10px 25px;
+            border-radius: 5px;
+            margin: 25px 20px 8em 20px
+        }
+
+        .social {
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            /* height: 140px; */
+
+        }
+
+        .fb,
+        .twitter,
+        .google,
+        .insta {
+            background-color: grey;
+            width: 40px;
+            height: 45px;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 45px 10px 10px 10px;
+            padding-bottom: 2px;
+
+        }
+
+        .fb:hover {
+            color: blue;
+            background-color: white;
+        }
+
+        .twitter:hover {
+            color: rgb(59, 89, 152);
+            background-color: white;
+        }
+
+        .google:hover {
+            color: red;
+            background-color: white;
+        }
+
+        .insta:hover {
+            background: #d6249f;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        .center {
+            width: 60%;
+            margin: auto;
+        }
+
+        .headings {
+            font-size: x-large;
+            font-weight: 550;
+            text-align: center;
+
+        }
+
+        .aboutme {
+            display: flex;
+            border: 1px currentColor;
+            box-shadow: 1px 1px 10px 0px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 10px;
+        }
+
+        .aboutme .headings {
+            padding-bottom: 10px;
+        }
+
+        .aboutme .about {
+            margin-right: 40px;
+            word-spacing: 5px;
+        }
+
+        .skills {
+            border: 1px currentColor;
+            box-shadow: 1px 1px 10px 0px;
+            margin-bottom: 80px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 100%;
+        }
+
+        .box1 {
+            width: 100%;
+        }
+
+
+        meter {
+            width: 100%;
+            height: 25px;
+            padding-right: 10px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .percent {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .inskills {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+        }
+
+        .education {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 80px;
+        }
+
+        .cits {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            border: 1px currentColor;
+            box-shadow: 1px 1px 10px 0px;
+        }
+
+        .iti {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            border: 1px currentColor;
+            box-shadow: 1px 1px 10px 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .school {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            border: 1px currentColor;
+            box-shadow: 1px 1px 10px 0px;
+            margin-bottom: 20px;
+
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 10px;
+        }
+
+        .white {
+            margin-top: 0%;
+            padding-left: 15px;
+            padding-top: 10px;
+        }
+
+        .course {
+            font-size: 25px;
+        }
+
+        .institute {
+            font-size: smaller;
+            color: grey;
+        }
+
+        .contactbox {
+            position: absolute;
+            border: 1px solid;
+            width: 35%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            top: 23%;
+            left: 35%;
+            background-color: white;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding-left: 15px;
+        }
+
+        #cont {
+            display: block;
+        }
+
+        .contact1 input {
+            margin-bottom: 15px;
+        }
+
+        .contact2 h5,
+        p {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .contact2 h5 {
+            margin-top: 25px;
+        }
+
+        #send {
+            display: block;
+            background-color: green;
+            border: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .contact input {
+            border: none;
+            /* padding: 5px; */
+        }
+
+        .contact textarea {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        /* #input_name::before {
+            content: url("<i class="fa fa-user-circle"></i>"); */
+
+
+        /* .inputname {
+            border: 1px solid;
+            border-radius: 20px;
+            width: 70%;
+            padding: 0px 0px 0px 0px;
+        } */
+
+        input {
+            content: counter("&#xf119");
+        }
+
+        .map {
+
+            width: 100%;
+            height: 60vh;
+        }
+
+        .both {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover">
+        <!-- cover photo -->
+        <div class="nav">
+            <p class="cv">CREATIVE CV</p>
+            <div class="menu">
+                <input type="button" value="About">
+                <input type="button" value="Skills">
+                <input type="button" value="Portfolio">
+                <input type="button" value="Experience">
+                <input type="button" value="Contact">
+            </div>
+
+        </div>
+
+        <div class="headdetails">
+            <div>
+                <img src="vishwas.jpg" alt="" height="150" width="150" class="mypic">
+            </div>
+            <div class="myname">
+                Vishwas Parashar
+            </div>
+            <div class="profile">
+                FRESHER
+            </div>
+            <div class="buttons">
+                <button>Hire Me</button>
+                <button>Download CV</button>
+            </div>
+            <div class="social">
+                <div class="fb"><i class="fa fa-facebook fa-2x"></i></div>
+                <div class="twitter"><i class="fa fa-twitter fa-2x"></i></div>
+                <div class="google"><i class="fa fa-google-plus fa-2x"></i></div>
+                <div class="insta"><i class="fa fa-instagram fa-2x"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="aboutme">
+            <div class="about">
+                <p class="headings" style="text-align: left;">About</p>
+                <p>Hello! I am Vishwas Parashar.</p>
+                <p>Currently I am pursuing "Advanced Diploma (Vocational) in IT, Networking and Cloud Computing". Till
+                    now I have learnt Computer Hardware, Linux OS, Networking, HTML and CSS. I am still working on my
+                    skills.</p>
+            </div>
+            <div class="info">
+                <p class="headings" style="text-align: left;">Basic Information</p>
+                <table>
+                    <tr>
+                        <td>AGE:</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>EMAIL:</td>
+                        <td>parasharvishvas@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>PHONE:</td>
+                        <td>+91 6376930249</td>
+                    </tr>
+                    <tr>
+                        <td>ADDRESS:</td>
+                        <td>Dholpur, Rajasthan (328001)</td>
+                    </tr>
+                    <tr>
+                        <td>LANGUAGE:</td>
+                        <td>English, Hindi</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <p class="headings">Professional Skills</p>
+        </div>
+        <div class="skills">
+            <div class="box1">
+                <div class="inskills">
+                    <div class="phtml">HTML</div>
+                    <div class="percent">80%</div>
+                </div>
+                <meter value="80" max="100"></meter>
+            </div>
+            <div class="box2">
+                <div class="inskills">
+                    <div class="phtml">CSS</div>
+                    <div class="percent">60%</div>
+                </div>
+                <meter value="60" max="100"></meter>
+            </div>
+            <div class="box2">
+                <div class="inskills">
+                    <div class="phtml">Hardware Maintenance</div>
+                    <div class="percent">70%</div>
+                </div>
+                <meter value="70" max="100"></meter>
+            </div>
+            <div class="box2">
+                <div class="inskills">
+                    <div class="phtml">Networking</div>
+                    <div class="percent">60%</div>
+                </div>
+                <meter value="60" max="100"></meter>
+            </div>
+        </div>
+
+        <div class="portfolio">
+            <!-- media files -->
+        </div>
+        <div class="experience">
+            <!-- fresher -->
+        </div>
+        <p class="headings">Education</p>
+        <div class="education">
+            <div class="cits">
+                <div class="green">
+                    <div class="year">2021-2022</div>
+                    <div class="course">C.I.T.S.</div>
+                </div>
+                <div class="white">
+                    <div class="coursename">
+                        <p>CITS (Craft Instructor Training Scheme) in Fitter Trade</p>
+                    </div>
+                    <div class="institute">
+                        <p>National Skill Training Institute, Jodhpur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="iti">
+                <div class="green">
+                    <div class="year">2018-2020</div>
+                    <div class="course">I.T.I.</div>
+                </div>
+                <div class="white">
+                    <p class="coursename">I.T.I. in Fitter Trade</p>
+                    <p class="institute">Govt. ITI College Dholpur</p>
+                </div>
+            </div>
+            <div class="school">
+                <div class="green">
+                    <div class="year">2017-2018</div>
+                    <div class="course">Secondary</div>
+                </div>
+                <div class="white">
+                    <p class="coursename">All Subjects</p>
+                    <p class="institute">Board of Secondary Education Rajasthan, Ajmer</p>
+                </div>
+            </div>
+
+            <!-- educational details -->
+        </div>
+    </div>
+    <div class="both">
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14312.625385161311!2d73.0005462!3d26.2565887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6360ba0d1120491b!2sNational%20Skill%20Training%20Institute%2C%20Jodhpur!5e0!3m2!1sen!2sin!4v1673522746562!5m2!1sen!2sin"
+                class="map"></iframe>
+        </div>
+
+        <div class="contactbox">
+            <p class="headings" id="cont">Contact Me</p>
+            <div class="contact">
+                <div class="contact1">
+                    <h5>Feel free to contact me</h5>
+                    <form action="get">
+                        <div class="inputname">
+                            👤<input type="text" placeholder="Name" #input_name>
+                        </div>
+                        <div class="inputsub">
+                            📝<input type="text" placeholder="Subject">
+                        </div>
+                        <div class="inputmail">
+                            📧<input type="email" name="" id="" placeholder="Email">
+                        </div>
+                        <div class="msg">
+                            <textarea name="" id="" cols="18" rows="3" placeholder="Your Message"></textarea>
+                            <input type="button" value="send" id="send">
+                        </div>
+                </div>
+                </form>
+                <div class="contact2">
+                    <div class="address">
+                        <h5>ADDRESS</h5>
+                        <p>Dholpur, Rajasthan (328001)</p>
+                    </div>
+                    <div class="phone">
+                        <h5>Phone</h5>
+                        <p>+91 63769 30249</p>
+                    </div>
+                    <div class="Email">
+                        <h5>Email</h5>
+                        <p>parasharvishvas@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
