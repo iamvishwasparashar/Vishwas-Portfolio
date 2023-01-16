@@ -50,6 +50,7 @@
             border: transparent;
             background: transparent;
             font-size: 20px;
+            margin-right: 40px;
         }
 
         .headdetails {
@@ -74,7 +75,7 @@
             margin-top: 10px;
         }
 
-        .buttons button {
+        .buttons input {
             background-color: green;
             border: none;
             color: white;
@@ -94,7 +95,8 @@
         .fb,
         .twitter,
         .google,
-        .insta {
+        .insta,
+        .git {
             background-color: grey;
             width: 40px;
             height: 45px;
@@ -125,6 +127,11 @@
             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
         }
 
+        .git:hover {
+            background-color: black;
+            color: white;
+        }
+
         .center {
             width: 60%;
             margin: auto;
@@ -134,10 +141,11 @@
             font-size: x-large;
             font-weight: 550;
             text-align: center;
+            margin-bottom: 15px;
 
         }
 
-        .aboutme {
+        #aboutme {
             display: flex;
             border: 1px currentColor;
             box-shadow: 1px 1px 10px 0px;
@@ -146,16 +154,16 @@
             padding: 10px;
         }
 
-        .aboutme .headings {
+        #aboutme .headings {
             padding-bottom: 10px;
         }
 
-        .aboutme .about {
+        #aboutme .about {
             margin-right: 40px;
             word-spacing: 5px;
         }
 
-        .skills {
+        #skills {
             border: 1px currentColor;
             box-shadow: 1px 1px 10px 0px;
             margin-bottom: 80px;
@@ -310,11 +318,7 @@
             padding: 0px 0px 0px 0px;
         } */
 
-        input {
-            content: counter("&#xf119");
-        }
-
-        .map {
+        #map {
 
             width: 100%;
             height: 60vh;
@@ -322,6 +326,10 @@
 
         .both {
             position: relative;
+        }
+
+        input[type="button"]:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -332,11 +340,11 @@
         <div class="nav">
             <p class="cv">CREATIVE CV</p>
             <div class="menu">
-                <input type="button" value="About">
-                <input type="button" value="Skills">
-                <input type="button" value="Portfolio">
-                <input type="button" value="Experience">
-                <input type="button" value="Contact">
+                <a href="#aboutme"><input type="button" value="About"></a>
+                <a href="#skills"><input type="button" value="Skills"></a>
+                <!-- <input type="button" value="Portfolio">
+                <input type="button" value="Experience"> -->
+                <a href="#map"><input type="button" value="Contact"></a>
             </div>
 
         </div>
@@ -352,20 +360,21 @@
                 FRESHER
             </div>
             <div class="buttons">
-                <button>Hire Me</button>
-                <button>Download CV</button>
+                <a href="#map"><input class="button" type="button" value="Hire Me"></a>
+                <a href="Resume.html" target="_blank"><input class="button" type="button" value="Download CV"></a>
             </div>
             <div class="social">
-                <div class="fb"><i class="fa fa-facebook fa-2x"></i></div>
+                <!-- <div class="fb"><i class="fa fa-facebook fa-2x"></i></div>
                 <div class="twitter"><i class="fa fa-twitter fa-2x"></i></div>
                 <div class="google"><i class="fa fa-google-plus fa-2x"></i></div>
-                <div class="insta"><i class="fa fa-instagram fa-2x"></i></div>
+                <div class="insta"><i class="fa fa-instagram fa-2x"></i></div> -->
+                <div class="git"><a href="http://github.com/iamvishwasparashar" target="_blank"><i class="fa fa-github fa-2x"></i></a></a></div>
             </div>
         </div>
     </div>
 
     <div class="center">
-        <div class="aboutme">
+        <div id="aboutme">
             <div class="about">
                 <p class="headings" style="text-align: left;">About</p>
                 <p>Hello! I am Vishwas Parashar.</p>
@@ -402,13 +411,13 @@
         <div>
             <p class="headings">Professional Skills</p>
         </div>
-        <div class="skills">
+        <div id="skills">
             <div class="box1">
                 <div class="inskills">
                     <div class="phtml">HTML</div>
-                    <div class="percent">80%</div>
+                    <div class="percent">70%</div>
                 </div>
-                <meter value="80" max="100"></meter>
+                <meter value="70" max="100"></meter>
             </div>
             <div class="box2">
                 <div class="inskills">
@@ -420,16 +429,16 @@
             <div class="box2">
                 <div class="inskills">
                     <div class="phtml">Hardware Maintenance</div>
-                    <div class="percent">70%</div>
+                    <div class="percent">60%</div>
                 </div>
-                <meter value="70" max="100"></meter>
+                <meter value="60" max="100"></meter>
             </div>
             <div class="box2">
                 <div class="inskills">
                     <div class="phtml">Networking</div>
-                    <div class="percent">60%</div>
+                    <div class="percent">50%</div>
                 </div>
-                <meter value="60" max="100"></meter>
+                <meter value="50" max="100"></meter>
             </div>
         </div>
 
@@ -483,7 +492,7 @@
         <div>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14312.625385161311!2d73.0005462!3d26.2565887!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6360ba0d1120491b!2sNational%20Skill%20Training%20Institute%2C%20Jodhpur!5e0!3m2!1sen!2sin!4v1673522746562!5m2!1sen!2sin"
-                class="map"></iframe>
+                id="map"></iframe>
         </div>
 
         <div class="contactbox">
